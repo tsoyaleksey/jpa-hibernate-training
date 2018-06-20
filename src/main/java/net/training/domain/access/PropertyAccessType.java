@@ -1,6 +1,7 @@
 package net.training.domain.access;
 
 import lombok.Data;
+import net.training.domain.BaseEntity;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
@@ -12,7 +13,7 @@ import javax.persistence.Table;
 @Entity
 @Access(AccessType.PROPERTY)
 @Table(name = "PROPERTY_ACCESS_TYPE")
-public class PropertyAccessType {
+public class PropertyAccessType extends BaseEntity {
 	
 	@Column(name = "name")
 	private String name;
